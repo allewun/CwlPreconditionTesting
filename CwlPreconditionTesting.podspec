@@ -13,13 +13,16 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "8.0"
   s.osx.deployment_target = "10.9"
   
-  s.source        = { :git => "https://github.com/mattgallagher/CwlPreconditionTesting.git", :tag => "#{s.version}" }
+  s.source        = { :git => "https://github.com/allewun/CwlPreconditionTesting.git", :tag => "#{s.version}" }
   s.source_files  =
     "Sources/CwlPreconditionTesting/CwlBadInstructionException.swift",
     "Sources/CwlPreconditionTesting/CwlCatchBadInstruction.swift",
     "Sources/CwlPreconditionTesting/CwlDarwinDefinitions.swift",
     "Sources/CwlPreconditionTesting/Mach/*.h",
     "Sources/CwlMachBadInstructionHandler/CwlMachBadInstructionHandler.m",
-    "Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h"
+    "Sources/CwlMachBadInstructionHandler/include/CwlMachBadInstructionHandler.h",
+    "Dependencies/CwlCatchException/Sources/CwlCatchException/CwlCatchException.swift",
+    "Dependencies/CwlCatchException/Sources/CwlCatchExceptionSupport/CwlCatchException.m",
+    "Dependencies/CwlCatchException/Sources/CwlCatchExceptionSupport/include/CwlCatchException.h"
   s.ios.source_files = "Sources/CwlMachBadInstructionHandler/mach_excServer.{c,h}"
 end
